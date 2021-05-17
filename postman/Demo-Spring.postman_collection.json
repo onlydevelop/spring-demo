@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Demo-Spring",
+		"_postman_id": "1bb49d4e-2fb2-7cfa-3fdc-dabd4c5e958c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST_USER_1",
+			"request": {
+				"url": "http://localhost:8080/api/tutorials",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST_USER_2",
+			"request": {
+				"url": "http://localhost:8080/api/tutorials",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_USER_1",
+			"request": {
+				"url": "http://localhost:8080/api/tutorials",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_USER",
+			"request": {
+				"url": "http://localhost:8080/api/tutorials",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER",
+			"request": {
+				"url": "http://localhost:8080/api/tutorials",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
