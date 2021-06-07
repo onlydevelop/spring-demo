@@ -62,7 +62,13 @@ public class CartController {
 
         if (cartData.isPresent()) {
             Cart _cart = cartData.get();
-            _cart.setItems(cart.getItems());
+            for (Item _item: _cart.getItems()) {
+                for(Item item: cart.getItems()) {
+                    if (_item.getId() == item.getId()) {
+                        cart.updateItem(_item, item);
+                    }
+                }
+            }
             return new ResponseEntity<>(cartRepository.save(_cart), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

@@ -26,6 +26,11 @@ public class Cart {
         items.add(item);
     }
 
+    public void updateItem(Item oldItem, Item newItem) {
+        oldItem.setTitle(newItem.getTitle());
+        oldItem.setDescription(newItem.getDescription());
+    }
+
     public void removeItem(Item item) {
         item.setCart(null);
         items.remove(item);
