@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "POST_USER_1",
+			"name": "POST_ITEM_1",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -20,7 +20,7 @@
 					"raw": "{\n\t\"title\": \"Title1\",\n\t\"description\": \"Description1\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials",
+					"raw": "http://localhost:8080/api/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -28,14 +28,14 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials"
+						"items"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "POST_USER_2",
+			"name": "POST_ITEM_2",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -49,7 +49,7 @@
 					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials",
+					"raw": "http://localhost:8080/api/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -57,14 +57,14 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials"
+						"items"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT_USER_1",
+			"name": "PUT_ITEM_1",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -75,10 +75,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Title1\",\n\t\"description\": \"Description1\",\n\t\"published\": true\n}"
+					"raw": "{\n\t\"title\": \"Title11\",\n\t\"description\": \"Description11\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/1",
+					"raw": "http://localhost:8080/api/items/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -86,7 +86,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials",
+						"items",
 						"1"
 					]
 				}
@@ -94,7 +94,7 @@
 			"response": []
 		},
 		{
-			"name": "GET_USER",
+			"name": "GET_ITEM_1",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -104,7 +104,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials",
+					"raw": "http://localhost:8080/api/items/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -112,14 +112,15 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials"
+						"items",
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET_USER_PUBLISHED",
+			"name": "GET_ITEM_ALL",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -129,7 +130,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/published",
+					"raw": "http://localhost:8080/api/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -137,8 +138,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials",
-						"published"
+						"items"
 					]
 				}
 			},
@@ -159,7 +159,7 @@
 					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/1",
+					"raw": "http://localhost:8080/api/items/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -167,7 +167,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials",
+						"items",
 						"1"
 					]
 				}
@@ -189,7 +189,7 @@
 					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials",
+					"raw": "http://localhost:8080/api/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -197,7 +197,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tutorials"
+						"items"
 					]
 				}
 			},

@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "tutorials")
-public class Tutorial {
+@Table(name = "items")
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -18,14 +18,10 @@ public class Tutorial {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "published")
-    private boolean published;
+    public Item() {}
 
-    public Tutorial() {}
-
-    public Tutorial(String title, String description, boolean published) {
+    public Item(String title, String description) {
         this.title = title;
         this.description = description;
-        this.published = published;
     }
 }
