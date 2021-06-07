@@ -1,111 +1,208 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "0bb93943-f4d3-4e5a-a735-407d6bceba34",
 		"name": "Demo-Spring",
-		"_postman_id": "1bb49d4e-2fb2-7cfa-3fdc-dabd4c5e958c",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "POST_USER_1",
 			"request": {
-				"url": "http://localhost:8080/api/tutorials",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+					"raw": "{\n\t\"title\": \"Title1\",\n\t\"description\": \"Description1\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "POST_USER_2",
 			"request": {
-				"url": "http://localhost:8080/api/tutorials",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "PUT_USER_1",
 			"request": {
-				"url": "http://localhost:8080/api/tutorials",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+					"raw": "{\n\t\"title\": \"Title1\",\n\t\"description\": \"Description1\",\n\t\"published\": true\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET_USER",
 			"request": {
-				"url": "http://localhost:8080/api/tutorials",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
-				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE_USER",
+			"name": "GET_USER_PUBLISHED",
 			"request": {
-				"url": "http://localhost:8080/api/tutorials",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/published",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"published"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER_1",
+			"request": {
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER_ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Title2\",\n\t\"description\": \"Description2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
