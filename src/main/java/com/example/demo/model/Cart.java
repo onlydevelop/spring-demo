@@ -1,9 +1,11 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -13,12 +15,19 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToMany(mappedBy="cart", cascade = CascadeType.ALL)
-    private Set<Item> items;
+    @JsonManagedReference
+    @OneToMany(mappedBy="cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Item> items = new ArrayList<Item>();;
 
     public Cart() {}
 
-    public Cart(Set<Item> items) {
-        this.items = items;
+    public void addItem(Item item) {
+        item.setCart(this);
+        items.add(item);
+    }
+
+    public void removeItem(Item item) {
+        item.setCart(null);
+        items.remove(item);
     }
 }

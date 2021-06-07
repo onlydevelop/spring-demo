@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,8 +19,8 @@ public class Item {
     @Column(name = "description")
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name="cart_id")
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
     private Cart cart;
 
     public Item() {}

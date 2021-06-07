@@ -45,12 +45,11 @@ public class CartController {
     @PostMapping
     public ResponseEntity<Cart> createCart(@RequestBody Cart cart) {
         try {
-            Cart _cart = cartRepository.save(new Cart());
-            Set<Item> items = cart.getItems();
-            for (Item item: items) {
-                item.setCart(_cart);
-                itemRepository.save(item);
+            Cart cartData = new Cart();
+            for (Item item: cart.getItems()) {
+                cartData.addItem(item);
             }
+            Cart _cart = cartRepository.save(cartData);
             return new ResponseEntity<>(_cart, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
