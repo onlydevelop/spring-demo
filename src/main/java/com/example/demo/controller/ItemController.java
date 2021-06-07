@@ -12,12 +12,12 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/items")
 public class ItemController {
     @Autowired
     ItemRepository itemRepository;
 
-    @GetMapping("/items")
+    @GetMapping
     public ResponseEntity<List<Item>> getAllItems(@RequestParam(required = false) String title) {
         try {
             List<Item> items = new ArrayList<Item>();
@@ -37,7 +37,7 @@ public class ItemController {
         }
     }
 
-    @GetMapping("/items/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Item> getItemById(@PathVariable("id") long id) {
         Optional<Item> itemsData = itemRepository.findById(id);
 
@@ -48,7 +48,7 @@ public class ItemController {
         }
     }
 
-    @PostMapping("/items")
+    @PostMapping
     public ResponseEntity<Item> createItem(@RequestBody Item item) {
         try {
             Item _item = itemRepository.save(new Item(item.getTitle(), item.getDescription()));
@@ -58,7 +58,7 @@ public class ItemController {
         }
     }
 
-    @PutMapping("/items/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Item> updateItem(@PathVariable("id") long id, @RequestBody Item item) {
         Optional<Item> itemData = itemRepository.findById(id);
 
@@ -72,7 +72,7 @@ public class ItemController {
         }
     }
 
-    @DeleteMapping("/items/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteItem(@PathVariable("id") long id) {
         try {
             itemRepository.deleteById(id);
@@ -82,7 +82,7 @@ public class ItemController {
         }
     }
 
-    @DeleteMapping("/items")
+    @DeleteMapping
     public ResponseEntity<HttpStatus> deleteAllItems() {
         try {
             itemRepository.deleteAll();

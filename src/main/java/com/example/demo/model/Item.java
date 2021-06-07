@@ -18,6 +18,10 @@ public class Item {
     @Column(name = "description")
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name="cart_id")
+    private Cart cart;
+
     public Item() {}
 
     public Item(String title, String description) {
